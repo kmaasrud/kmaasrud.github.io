@@ -1,3 +1,86 @@
+/* Base */
+:root {
+  --transition-length: 150ms;
+  --text-color: 255, 255, 255;
+  --accent: 240, 255, 0;
+  --bg-color: 0, 0, 0;
+}
+
 html, body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(var(--bg-color));
+  color: rgb(var(--text-color));
+}
+
+body {
+  height: 100vh;
+}
+
+
+/* Some base classes */
+.wrapper {
+  margin: auto;
+}
+
+.inner-wrap {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.outer-gap {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+}
+
+header {
+  margin-top: 120px;
+}
+
+
+/* Link styling */
+.home-link {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(var(--text-color));
+  transition: all var(--transition-length) ease-in;
+}
+a:hover {
+  color: rgb(var(--accent))
+}
+ul a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: rgb(var(--accent));
+  transition: width var(--transition-length) ease-in;
+}
+ul a:hover::after {
+  width: 100%;
+}
+
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  float: left;
+  margin-right: 30px;
+}
+
+.content {
+  margin-top: 80px;
+}
+
+
+/* Specific page styling */
+header li {
+  font-weight: 300; 
 }
