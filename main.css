@@ -9,13 +9,15 @@
 html, body {
   margin: 0px;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'IBM Plex', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   background-color: rgb(var(--bg-color));
   color: rgb(var(--text-color));
 }
 
 body {
-  height: 100vh;
+  height: 1vh;
 }
 
 
@@ -34,22 +36,14 @@ body {
   padding: 0 20px;
 }
 
-header {
-  margin-top: 120px;
-}
-
 
 /* Link styling */
-.home-link {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 2em;
-}
-
 a {
   text-decoration: none;
   color: rgb(var(--text-color));
   transition: all var(--transition-length) ease-in;
 }
+strong a { font-weight: bolder; }
 a:hover {
   color: rgb(var(--accent))
 }
@@ -69,6 +63,8 @@ ul a:hover::after {
 ul {
   list-style: none;
   padding: 0;
+  width: 70%;
+  margin: auto;
 }
 li {
   float: left;
@@ -77,10 +73,4 @@ li {
 
 .content {
   margin-top: 80px;
-}
-
-
-/* Specific page styling */
-header li {
-  font-weight: 300; 
 }
