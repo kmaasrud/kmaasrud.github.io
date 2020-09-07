@@ -1,67 +1,102 @@
 /* Base */
 :root {
   --transition-length: 150ms;
-  --text-color: 0, 0, 0;
-  --accent: 40, 40, 0;
+  --text-color: 10, 10, 10;
+  --link-color: 60, 110, 237;
   --bg-color: 255, 255, 255;
+  --accent-color: 100, 180, 255;
 }
 
+/* Cooler selection color */
+::selection, ::-moz-selection {
+  background: rgb(var(--text-color));
+  color: rgb(var(--bg-color));
+}
+
+/* HTML and body */
 html, body {
   margin: 0px;
-  padding: 10px 16px 12px 16px;
   height: 100%;
-  line-height: 17px; 
-  font-family: sans-serif;
+  font-family:  sans-serif;
   font-weight: 400;
   font-size: 16px;
-  background-color: rgb(var(--bg-color));
+  line-height: 1.4;
+}
+body {
   color: rgb(var(--text-color));
+  background-color: rgb(var(--bg-color))
 }
 
-body {
-  height: 1vh;
+/* Sidebar styling */
+nav {
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 30px 0px 0px 30px;
+  line-height: 1.2;
+  display: grid;
+  height: calc(100vh - 60px);
 }
-p {
+nav p {
   margin: 0;
 }
+nav .footer {
+  align-self: end;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 
-/* Some base classes */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: 16px;
-  height: calc(100vh - 20px);
+/* Content styling */
+article {
+  margin-left: 280px;
+  margin-right: 30px;
+  max-width: 780px;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 750px) {
+    nav {
+      height: auto;
+      width: 100%;
+      background: rgb(var(--bg-color));
+    }
+    nav ul li {
+      float: left;
+      margin-right: 10px;
+    }
+    nav .footer, nav br, #desc {
+      display: none;
+    }
+    article {
+      margin: 0px 30px;
+    }
 }
 
 /* Link styling */
 a {
-  display: inline-block;
-  text-decoration: none;
-  color: rgb(var(--text-color));
-  border-bottom: 1px solid rgba(var(--text-color), 0.1);
-}
-a::after {
   position: relative;
-  display: block;
+  color: rgb(var(--text-color));
+  text-decoration-color: rgba(var(--text-color), 0.3);
+}
+a:after {
+  position: absolute;
   content: "";
   width: 30%;
   height: 1px;
-  top: 1px;
+  bottom: 2.5px;
+  left: 0;
   background-color: rgb(var(--text-color));
   -webkit-transition: 0.3s;
   transition: width opacity 0.3s;
   opacity: 0;
 }
-a:hover::after {
+a:hover:after {
   width: 100%;
-  opacity: 0.7;
-}
-
-
-/* List styling */
-ul {
-  padding: 0;
-  margin: auto;
-  list-style-type: none;
+  opacity: 1;
 }
