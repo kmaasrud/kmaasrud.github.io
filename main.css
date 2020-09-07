@@ -1,17 +1,19 @@
 /* Base */
 :root {
   --transition-length: 150ms;
-  --text-color: 255, 255, 255;
-  --accent: 240, 255, 0;
-  --bg-color: 0, 0, 0;
+  --text-color: 0, 0, 0;
+  --accent: 40, 40, 0;
+  --bg-color: 255, 255, 255;
 }
 
 html, body {
   margin: 0px;
+  padding: 10px 16px 12px 16px;
   height: 100%;
-  font-family: 'IBM Plex', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  line-height: 17px; 
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   background-color: rgb(var(--bg-color));
   color: rgb(var(--text-color));
 }
@@ -19,58 +21,47 @@ html, body {
 body {
   height: 1vh;
 }
+p {
+  margin: 0;
+}
 
 
 /* Some base classes */
-.wrapper {
-  margin: auto;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 16px;
+  height: calc(100vh - 20px);
 }
-
-.inner-wrap {
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.outer-gap {
-  width: calc(100% - 40px);
-  padding: 0 20px;
-}
-
 
 /* Link styling */
 a {
+  display: inline-block;
   text-decoration: none;
   color: rgb(var(--text-color));
-  transition: all var(--transition-length) ease-in;
+  border-bottom: 1px solid rgba(var(--text-color), 0.1);
 }
-strong a { font-weight: bolder; }
-a:hover {
-  color: rgb(var(--accent))
-}
-ul a::after {
-  content: '';
+a::after {
+  position: relative;
   display: block;
-  width: 0;
+  content: "";
+  width: 30%;
   height: 1px;
-  background: rgb(var(--accent));
-  transition: width var(--transition-length) ease-in;
+  top: 1px;
+  background-color: rgb(var(--text-color));
+  -webkit-transition: 0.3s;
+  transition: width opacity 0.3s;
+  opacity: 0;
 }
-ul a:hover::after {
+a:hover::after {
   width: 100%;
+  opacity: 0.7;
 }
+
 
 /* List styling */
 ul {
-  list-style: none;
   padding: 0;
-  width: 70%;
   margin: auto;
-}
-li {
-  float: left;
-  margin-right: 30px;
-}
-
-.content {
-  margin-top: 80px;
+  list-style-type: none;
 }
