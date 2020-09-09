@@ -78,6 +78,7 @@ article {
     }
 }
 
+
 /* Link styling */
 a {
   position: relative;
@@ -99,4 +100,36 @@ a:after {
 a:hover:after {
   width: 100%;
   opacity: 1;
+}
+
+
+/* Headers */
+header {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+/* Code */
+pre {
+  background-color: rgba(130, 130, 130, 0.1);
+  padding: 20px;
+  border-left: 5px solid rgb(var(--accent-color));
+  border-radius: 0px 10px 10px 0px;
+  font-size: 14px;
+}
+pre code { background: none !important; }
+p code {
+  padding: .2em .4em;
+  font-size: 90%;
+  font-family: 'IBM Plex Mono';
+  background: rgba(130, 130, 130, 0.1);
+  border-radius: 3px;
+}
+
+
+/* Styling of horizontal rules */
+hr {
+  border-color: rgba(var(--text-color), 0.1)
 }
