@@ -107,8 +107,11 @@ pre {
   border-radius: 0px 10px 10px 0px;
   font-size: 14px;
 }
-pre code { background: none !important; }
-p code {
+pre code {
+  background: none !important;
+  font-size: 100%;
+}
+code {
   padding: .2em .4em;
   font-size: 90%;
   font-family: 'IBM Plex Mono';
@@ -120,4 +123,18 @@ p code {
 /* Styling of horizontal rules */
 hr {
   border-color: rgba(var(--text-color), 0.1)
+}
+
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border: 1px solid rgba(var(--text-color), 0.1)
+}
+tr {
+  border-bottom: 1px solid rgba(var(--text-color), 0.1);
+}
+td, th {
+  border-right: 1px solid rgba(var(--text-color), 0.1);
+  padding: 8px;
 }
