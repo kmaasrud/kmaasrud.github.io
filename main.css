@@ -61,7 +61,7 @@ nav ul {
 
 /* Content styling */
 article {
-  margin: 130px 30px 100px 340px;
+  margin: 100px 30px 100px 340px;
   max-width: 900px;
 }
 
@@ -92,7 +92,7 @@ article {
       display: none;
     }
     article {
-      margin: 0px 30px;
+      margin: 110px 30px;
     }
 }
 
