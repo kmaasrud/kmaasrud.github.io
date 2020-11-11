@@ -62,9 +62,8 @@ nav ul {
 
 /* Content styling */
 article {
-  margin-left: 280px;
-  margin-right: 30px;
-  max-width: 900;
+  margin: 130px 30px 100px 340px;
+  max-width: 900px;
 }
 
 /* Responsive styling */
@@ -113,7 +112,6 @@ a:hover {
 
 /* Headers */
 header {
-  margin-top: 100px;
   font-weight: 700;
   font-size: 24px;
 }
