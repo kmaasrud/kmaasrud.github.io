@@ -35,7 +35,6 @@ body {
 /* Sidebar styling */
 nav {
   width: 250px;
-  max-width: 250px;
   text-align: right;
   position: fixed;
   z-index: 1;
