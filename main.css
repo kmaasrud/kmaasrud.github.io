@@ -26,10 +26,51 @@ body {
   color: rgb(var(--text-color));
   background-color: rgb(var(--bg-color))
 }
+/* Hide scrollbar */
+html::-webkit-scrollbar { display: none !important; }
+html { -ms-overflow-style: none !important; scrollbar-width: none !important; }
 
-#logo {
-  height: 50px;
-  margin-bottom: 20px;
+#main-logo {
+    height: 100vh;
+    position: relative;
+}
+#main-logo a {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#main-logo img {
+    height: 100px;
+}
+
+#main-page {
+    position: relative;
+    height: calc(100vh - 100px);
+    margin: 50px;
+    background-color: black;
+    --text-color: 255, 255, 255;
+}
+#main-page .content {
+    position: absolute;
+    margin: 40px;
+    font-size: calc(1rem + 3vw);
+    color: rgb(var(--text-color));
+}
+.content p {
+    margin-top: 0px;
+}
+
+/* Link styling */
+a {
+  position: relative;
+  color: rgb(var(--text-color));
+  text-decoration-color: rgb(var(--text-color));
+  transition: text-decoration-color var(--transition-length);
+}
+a:hover {
+  text-decoration-color: rgba(var(--text-color), 0.0);
 }
 
 /* Sidebar styling */
@@ -97,16 +138,6 @@ article {
 }
 
 
-/* Link styling */
-a {
-  position: relative;
-  color: rgb(var(--text-color));
-  text-decoration-color: rgba(var(--text-color), 0.5);
-  transition: text-decoration-color var(--transition-length);
-}
-a:hover {
-  text-decoration-color: rgba(var(--text-color), 0.0);
-}
 
 
 /* Headers */
