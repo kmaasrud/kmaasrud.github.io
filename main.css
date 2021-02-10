@@ -47,8 +47,8 @@ html { -ms-overflow-style: none !important; scrollbar-width: none !important; }
 
 #main-page {
     position: relative;
-    height: calc(100vh - 100px);
-    margin: 50px;
+    height: calc(100vh - calc(2 * calc(10px + 3vw)));
+    margin: calc(10px + 3vw);
     background-color: black;
     --text-color: 255, 255, 255;
 }
