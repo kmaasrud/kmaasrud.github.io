@@ -1,7 +1,7 @@
 /* Base */
 :root {
   --transition-length: 150ms;
-  --text-color: 10, 10, 10;
+  --text-color: 0, 0, 0;
   --link-color: 60, 110, 237;
   --bg-color: 255, 255, 255;
   --accent-color: 100, 180, 255;
@@ -42,21 +42,25 @@ html { -ms-overflow-style: none !important; scrollbar-width: none !important; }
     transform: translate(-50%, -50%);
 }
 #main-logo img {
-    height: 100px;
+    height: 7.7rem;
+    transition: transform .2s ease;
+}
+#main-logo img:hover {
+    transform: scale(1.2);
 }
 
 #main-page {
     position: relative;
-    height: calc(100vh - calc(2 * calc(10px + 3vw)));
     margin: calc(10px + 3vw);
-    background-color: black;
     --text-color: 255, 255, 255;
+    --bg-color: 0, 0, 0;
 }
 #main-page .content {
-    position: absolute;
-    margin: 40px;
-    font-size: calc(1rem + 3vw);
+    background-color: rgb(var(--bg-color));
+    padding: 40px;
+    font-size: calc(.8rem + 2vw);
     color: rgb(var(--text-color));
+    margin-bottom: calc(10px + 3vw);
 }
 .content p {
     margin-top: 0px;
@@ -72,72 +76,6 @@ a {
 a:hover {
   text-decoration-color: rgba(var(--text-color), 0.0);
 }
-
-/* Sidebar styling */
-nav {
-  width: 250px;
-  text-align: right;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  padding: 30px 30px 30px 30px;
-  border-right: 1px solid black;
-  line-height: 1.2;
-  display: grid;
-  height: calc(100vh - 60px);
-}
-nav p {
-  margin: 0;
-}
-nav .footer {
-  align-self: end;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-
-/* Content styling */
-article {
-  margin: 100px 30px 100px 340px;
-  max-width: 900px;
-}
-
-/* Responsive styling */
-@media only screen and (max-width: 750px) {
-    nav {
-      height: auto;
-      width: 100%;
-      background: rgb(var(--bg-color));
-      text-align: left;
-      padding: 30px 0px;
-    }
-    nav ul {
-      margin: 0px auto;
-    }
-    nav ul li, #logo {
-      float: left;
-    }
-    #logo {
-      margin-bottom: 0px;
-      margin-right: 20px;
-    }
-    nav ul li {
-      margin-right: 10px;
-      padding-top: 1rem;
-    }
-    nav .footer, nav br, #desc {
-      display: none;
-    }
-    article {
-      margin: 110px 30px;
-    }
-}
-
-
 
 
 /* Headers */
@@ -171,18 +109,4 @@ code {
 /* Styling of horizontal rules */
 hr {
   border-color: rgba(var(--text-color), 0.1)
-}
-
-
-/* Tables */
-table {
-  border-collapse: collapse;
-  border: 1px solid rgba(var(--text-color), 0.1)
-}
-tr {
-  border-bottom: 1px solid rgba(var(--text-color), 0.1);
-}
-td, th {
-  border-right: 1px solid rgba(var(--text-color), 0.1);
-  padding: 8px;
 }
